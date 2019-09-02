@@ -1,0 +1,5 @@
+INSERT_UPDATE Question; code[unique = true]; question      ; questionCustomer(uid); answer      ; answerCustomer(uid)
+                      ; 1                  ; testQuestion1 ; anonymous            ; testAnswer1 ; anonymous
+                      ; 2                  ; testQuestion2 ; anonymous            ; testAnswer2 ; anonymous
+                      ; 3                  ; testQuestion3 ; anonymous            ; testAnswer3 ; anonymous
+                      ; 4                  ; testQuestion4 ; anonymous            ; testAnswer4 ; anonymous
