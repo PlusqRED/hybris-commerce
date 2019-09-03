@@ -24,4 +24,18 @@
 	</bean>
 	-->
 
+	<bean class="questions.data.QuestionData">
+		<description>DTO to holding questions info and content</description>
+		<property name="id" type="java.lang.String"/>
+		<property name="question" type="java.lang.String"/>
+		<property name="questionCustomer" type="de.hybris.platform.core.model.user.CustomerModel"/>
+		<property name="answer" type="java.lang.String"/>
+		<property name="answerCustomer" type="de.hybris.platform.core.model.user.CustomerModel"/>
+	</bean>
+
+	<bean class="de.hybris.platform.cmsfacades.data.ProductData">
+		<description>Expanding default ProductData with questions</description>
+		<property name="questions" type="java.util.List&lt;questions.data.QuestionData&gt;"/>
+	</bean>
+
 </beans>

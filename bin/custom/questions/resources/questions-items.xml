@@ -49,6 +49,23 @@
 			</attributes>
 		</itemtype>
 
+		<itemtype code="QuestionsCMSComponent" extends="SimpleCMSComponent">
+			<attributes>
+				<attribute qualifier="numberOfQuestionsToShow" type="java.lang.Integer">
+					<description>number of questions to show</description>
+					<modifiers optional="false"/>
+					<defaultvalue>3</defaultvalue>
+					<persistence type="property" />
+				</attribute>
+				<attribute qualifier="fontSize" type="java.lang.Integer">
+					<description>font size of questions</description>
+					<modifiers optional="false"/>
+					<defaultvalue>15</defaultvalue>
+					<persistence type="property" />
+				</attribute>
+			</attributes>
+		</itemtype>
+
 	</itemtypes>
 
 

@@ -1,13 +1,14 @@
 /*
  * ----------------------------------------------------------------
  * --- WARNING: THIS FILE IS GENERATED AND WILL BE OVERWRITTEN! ---
- * --- Generated at 02.09.2019 13:41:21                         ---
+ * --- Generated at 03.09.2019 12:23:17                         ---
  * ----------------------------------------------------------------
  */
 package com.org.questions.jalo;
 
 import com.org.questions.constants.QuestionsConstants;
 import com.org.questions.jalo.Question;
+import com.org.questions.jalo.QuestionsCMSComponent;
 import de.hybris.platform.jalo.GenericItem;
 import de.hybris.platform.jalo.Item;
 import de.hybris.platform.jalo.Item.AttributeMode;
@@ -84,6 +85,32 @@ public abstract class GeneratedQuestionsManager extends Extension
 	public Question createQuestion(final Map attributeValues)
 	{
 		return createQuestion( getSession().getSessionContext(), attributeValues );
+	}
+	
+	public QuestionsCMSComponent createQuestionsCMSComponent(final SessionContext ctx, final Map attributeValues)
+	{
+		try
+		{
+			ComposedType type = getTenant().getJaloConnection().getTypeManager().getComposedType( QuestionsConstants.TC.QUESTIONSCMSCOMPONENT );
+			return (QuestionsCMSComponent)type.newInstance( ctx, attributeValues );
+		}
+		catch( JaloGenericCreationException e)
+		{
+			final Throwable cause = e.getCause();
+			throw (cause instanceof RuntimeException ?
+			(RuntimeException)cause
+			:
+			new JaloSystemException( cause, cause.getMessage(), e.getErrorCode() ) );
+		}
+		catch( JaloBusinessException e )
+		{
+			throw new JaloSystemException( e ,"error creating QuestionsCMSComponent : "+e.getMessage(), 0 );
+		}
+	}
+	
+	public QuestionsCMSComponent createQuestionsCMSComponent(final Map attributeValues)
+	{
+		return createQuestionsCMSComponent( getSession().getSessionContext(), attributeValues );
 	}
 	
 	@Override
