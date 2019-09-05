@@ -13,6 +13,9 @@ package org.training.initialdata.setup;
 import de.hybris.platform.commerceservices.dataimport.impl.CoreDataImportService;
 import de.hybris.platform.commerceservices.dataimport.impl.SampleDataImportService;
 import de.hybris.platform.commerceservices.setup.AbstractSystemSetup;
+import de.hybris.platform.commerceservices.setup.data.ImportData;
+import de.hybris.platform.commerceservices.setup.events.CoreDataImportedEvent;
+import de.hybris.platform.commerceservices.setup.events.SampleDataImportedEvent;
 import de.hybris.platform.core.initialization.SystemSetup;
 import de.hybris.platform.core.initialization.SystemSetup.Process;
 import de.hybris.platform.core.initialization.SystemSetup.Type;
@@ -22,6 +25,8 @@ import de.hybris.platform.core.initialization.SystemSetupParameterMethod;
 import org.training.initialdata.constants.TrainingInitialDataConstants;
 
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 
 import org.apache.log4j.Logger;
@@ -43,6 +48,8 @@ public class InitialDataSystemSetup extends AbstractSystemSetup
 
 	private CoreDataImportService coreDataImportService;
 	private SampleDataImportService sampleDataImportService;
+
+	public static final String TRAINING = "hybris";
 
 	/**
 	 * Generates the Dropdown and Multi-select boxes for the project data import
@@ -104,6 +111,21 @@ public class InitialDataSystemSetup extends AbstractSystemSetup
 		/*
 		 * Add import data for each site you have configured
 		 */
+
+		final List<ImportData> importData = new ArrayList<ImportData>();
+
+		final ImportData hybrisImportData = new ImportData();
+
+		hybrisImportData.setProductCatalogName(TRAINING);
+		hybrisImportData.setContentCatalogNames(Collections.singletonList(TRAINING));
+		hybrisImportData.setStoreNames(Collections.singletonList(TRAINING));
+		importData.add(hybrisImportData);
+
+		getCoreDataImportService().execute(this, context, importData);
+		getEventService().publishEvent(new CoreDataImportedEvent(context, importData));
+
+		getSampleDataImportService().execute(this, context, importData);
+		getEventService().publishEvent(new SampleDataImportedEvent(context, importData));
 	}
 
 	public CoreDataImportService getCoreDataImportService()

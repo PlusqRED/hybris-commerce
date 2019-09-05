@@ -8,8 +8,12 @@
 # Information and shall use it only in accordance with the terms of the
 # license agreement you entered into with SAP.
 # -----------------------------------------------------------------------
-# 
+#
 # Import links for the Multi Channel Cockpit (MCC)
 #
-INSERT_UPDATE DynamicLink;code[unique=true];area(code);sortorder;extensionName;parentLink(code);visibleScript;script
-;accelerator-site-links;channel;0;trainingcore;webfrontends;"return java.lang.Boolean.TRUE;";"return org.training.core.util.MccSiteUrlHelper.getAllSitesAndUrls();"
+# CMS Site
+INSERT_UPDATE DynamicLink; code[unique = true]    ; area(code); sortorder; extensionName; parentLink(code); visibleScript                    ; script
+                         ; accelerator-site-links ; channel   ; 0        ; trainingcore ; webfrontends    ; "return java.lang.Boolean.TRUE;" ; "return org.training.core.util.MccSiteUrlHelper.getAllSitesAndUrls();"
+
+INSERT_UPDATE CMSSite; uid[unique = true]; urlPatterns
+              ; store             ; (?i)^https?://[^/]+(/[^?]*)?\?(.*\&)?(site=store)(|\&.*)$,(?i)^https?://store\.[^/]+(|/.*|\?.*)$,(?i)^https?://api\.hybrisdev\.com(:[\d]+)?/rest.*$,(?i)^https?://[^/]*/store((?![\?\&]site=).)*

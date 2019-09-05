@@ -24,9 +24,10 @@
 <requires-extension name="promotionenginesamplesaddon"/>
 <requires-extension name="commerceorgsamplesaddon"/>
 <requires-extension name="acceleratorstorefrontcommons"/>
+<requires-extension name="questions"/>
 		<requires-extension name="trainingfacades"/>
 
-		<webmodule jspcompile="false" webroot="/trainingstorefront"/>
+		<webmodule jspcompile="false" webroot="/store"/>
 
 		
 		<meta key="extgen-template-extension" value="true"/>

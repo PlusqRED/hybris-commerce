@@ -63,7 +63,6 @@
     <extension name="trainingfulfilmentprocess"/>
     <extension name="traininginitialdata"/>
     <extension name="trainingstorefront"/>
-    <extension name="trainingtest"/>
     <extension name="questions" />
   </extensions>
 </hybrisconfig>

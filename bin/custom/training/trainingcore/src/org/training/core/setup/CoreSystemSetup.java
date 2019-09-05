@@ -78,6 +78,11 @@ public class CoreSystemSetup extends AbstractSystemSetup
 
 		final List<String> extensionNames = getExtensionNames();
 
+		if (importAccessRights && extensionNames.contains("cmscockpit")) {
+			importImpexFile(context, "/trainingcore/import/cockpits/cmscockpit/cmscockpit-users.impex");
+			importImpexFile(context, "/trainingcore/import/cockpits/cmscockpit/cmscockpit-access-rights.impex");
+		}
+
 		processCockpit(context, importAccessRights, extensionNames, "cmscockpit",
 				"/trainingcore/import/cockpits/cmscockpit/cmscockpit-users.impex",
 				"/trainingcore/import/cockpits/cmscockpit/cmscockpit-access-rights.impex");
