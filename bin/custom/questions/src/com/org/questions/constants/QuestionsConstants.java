@@ -20,6 +20,7 @@ public final class QuestionsConstants extends GeneratedQuestionsConstants
 
 	private QuestionsConstants()
 	{
+
 		//empty to avoid instantiating this constant class
 	}
 

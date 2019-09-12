@@ -1,9 +1,8 @@
 package com.org.questions.facades;
 
 import de.hybris.platform.cmsfacades.data.ProductData;
-
-import java.util.List;
+import de.hybris.platform.core.model.product.ProductModel;
 
 public interface QuestionFacade {
-    List<ProductData> getProductsWithQuestions();
+    ProductData getProductDataByProduct(ProductModel productModel);
 }

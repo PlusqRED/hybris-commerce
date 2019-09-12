@@ -1,13 +1,13 @@
 /*
  * ----------------------------------------------------------------
  * --- WARNING: THIS FILE IS GENERATED AND WILL BE OVERWRITTEN! ---
- * --- Generated at 05.09.2019 14:21:28                         ---
+ * --- Generated at 12.09.2019 11:17:22                         ---
  * ----------------------------------------------------------------
  */
 package com.org.questions.jalo;
 
 import com.org.questions.constants.QuestionsConstants;
-import de.hybris.platform.cms2.jalo.contents.components.SimpleCMSComponent;
+import de.hybris.platform.cms2lib.components.ProductDetailComponent;
 import de.hybris.platform.jalo.Item.AttributeMode;
 import de.hybris.platform.jalo.SessionContext;
 import java.util.Collections;
@@ -15,10 +15,10 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * Generated class for type {@link de.hybris.platform.cms2.jalo.contents.components.SimpleCMSComponent QuestionsCMSComponent}.
+ * Generated class for type {@link de.hybris.platform.cms2lib.components.ProductDetailComponent QuestionsCMSComponent}.
  */
 @SuppressWarnings({"deprecation","unused","cast","PMD"})
-public abstract class GeneratedQuestionsCMSComponent extends SimpleCMSComponent
+public abstract class GeneratedQuestionsCMSComponent extends ProductDetailComponent
 {
 	/** Qualifier of the <code>QuestionsCMSComponent.numberOfQuestionsToShow</code> attribute **/
 	public static final String NUMBEROFQUESTIONSTOSHOW = "numberOfQuestionsToShow";
@@ -27,7 +27,7 @@ public abstract class GeneratedQuestionsCMSComponent extends SimpleCMSComponent
 	protected static final Map<String, AttributeMode> DEFAULT_INITIAL_ATTRIBUTES;
 	static
 	{
-		final Map<String, AttributeMode> tmp = new HashMap<String, AttributeMode>(SimpleCMSComponent.DEFAULT_INITIAL_ATTRIBUTES);
+		final Map<String, AttributeMode> tmp = new HashMap<String, AttributeMode>(ProductDetailComponent.DEFAULT_INITIAL_ATTRIBUTES);
 		tmp.put(NUMBEROFQUESTIONSTOSHOW, AttributeMode.INITIAL);
 		tmp.put(FONTSIZE, AttributeMode.INITIAL);
 		DEFAULT_INITIAL_ATTRIBUTES = Collections.unmodifiableMap(tmp);

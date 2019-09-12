@@ -16,7 +16,7 @@ public class DefaultQuestionService implements QuestionService {
     private QuestionDAO questionDAO;
 
     @Override
-    public List<QuestionModel> getQuestionByProductCode(final String code) throws AmbiguousIdentifierException, UnknownIdentifierException {
+    public List<QuestionModel> getQuestionsByProductCode(final String code) throws AmbiguousIdentifierException, UnknownIdentifierException {
         return questionDAO.findQuestionsByProductCode(code);
     }
 
