@@ -17,3 +17,4 @@ INSERT_UPDATE ContentSlot; $contentCV[unique = true]; uid[unique = true]    ; na
 
 INSERT_UPDATE ContentSlotForPage; $contentCV[unique = true]; uid[unique = true]        ; position[unique = true]; page(uid, $contentCV)[unique = true][default = 'productDetails']; contentSlot(uid, $contentCV)[unique = true]
                                 ;                          ; discussionslotforpage-Pdp ; QuestionSlotName       ;                                                                 ; DiscussionContentSlot
+

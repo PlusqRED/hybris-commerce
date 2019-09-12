@@ -21,7 +21,6 @@
            http://www.springframework.org/schema/context/spring-context.xsd">
            
     <context:annotation-config/>
-
 	<context:component-scan base-package="com.org.questions"/>
 
 	<bean id="questionsCoreDataImportedEventListener" parent="abstractCoreDataImportedEventListener">
@@ -44,5 +43,15 @@
 	<bean id="questionsSampleDataEventListener" parent="abstractGenericAddOnSampleDataEventListener"  >
 		<property name="extensionName" value="questions" />
 	</bean>
+
+    <bean parent="modifyPopulatorList">
+        <property name="list" ref="productConverter"/>
+        <property name="add"  ref="questionCountPopulator"/>
+    </bean>
+
+    <bean parent="modifyPopulatorList">
+        <property name="list" ref="commerceSearchResultProductConverter"/>
+        <property name="add"  ref="searchResultQuestionCountPopulator"/>
+    </bean>
 
 </beans>

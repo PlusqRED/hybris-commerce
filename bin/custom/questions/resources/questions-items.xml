@@ -4,10 +4,10 @@
 
 	<relations>
 		<relation code="Product2Question" autocreate="true" generate="false" localized="false">
-			<sourceElement qualifier="product" type="Product" collectiontype="set" cardinality="one" ordered="true">
+			<sourceElement qualifier="product" type="Product" cardinality="one">
 				<modifiers read="true" write="true" search="true" optional="true" />
 			</sourceElement>
-			<targetElement qualifier="question" type="Question" cardinality="many">
+			<targetElement qualifier="questions" type="Question" cardinality="many" collectiontype="list">
 				<modifiers read="true" write="true" search="true" optional="true" />
 			</targetElement>
 		</relation>
@@ -48,6 +48,17 @@
 				</attribute>
 			</attributes>
 		</itemtype>
+
+        <itemtype code="Product" generate="false" autocreate="false">
+            <attributes>
+                <attribute qualifier="questionCount" type="java.lang.Integer">
+                    <description>number of questions</description>
+                    <modifiers optional="true"/>
+                    <defaultvalue>0</defaultvalue>
+                    <persistence type="dynamic" attributeHandler="questionCountAttributeHandler"/>
+                </attribute>
+            </attributes>
+        </itemtype>
 
 		<itemtype code="QuestionsCMSComponent" extends="ProductDetailComponent">
 			<attributes>

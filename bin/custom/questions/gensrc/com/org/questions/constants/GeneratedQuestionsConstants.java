@@ -1,7 +1,7 @@
 /*
  * ----------------------------------------------------------------
  * --- WARNING: THIS FILE IS GENERATED AND WILL BE OVERWRITTEN! ---
- * --- Generated at 12.09.2019 11:17:22                         ---
+ * --- Generated at 12.09.2019 16:52:09                         ---
  * ----------------------------------------------------------------
  */
 package com.org.questions.constants;
@@ -23,7 +23,8 @@ public class GeneratedQuestionsConstants
 	{
 		public static class Product
 		{
-			public static final String QUESTION = "question".intern();
+			public static final String QUESTIONCOUNT = "questionCount".intern();
+			public static final String QUESTIONS = "questions".intern();
 		}
 	}
 	public static class Relations

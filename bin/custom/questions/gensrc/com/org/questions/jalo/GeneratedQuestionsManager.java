@@ -1,7 +1,7 @@
 /*
  * ----------------------------------------------------------------
  * --- WARNING: THIS FILE IS GENERATED AND WILL BE OVERWRITTEN! ---
- * --- Generated at 12.09.2019 11:17:22                         ---
+ * --- Generated at 12.09.2019 16:52:09                         ---
  * ----------------------------------------------------------------
  */
 package com.org.questions.jalo;
@@ -21,8 +21,8 @@ import de.hybris.platform.jalo.type.CollectionType;
 import de.hybris.platform.jalo.type.ComposedType;
 import de.hybris.platform.jalo.type.JaloGenericCreationException;
 import de.hybris.platform.util.OneToManyHandler;
-import java.util.Collection;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -32,16 +32,16 @@ import java.util.Map;
 public abstract class GeneratedQuestionsManager extends Extension
 {
 	/**
-	* {@link OneToManyHandler} for handling 1:n QUESTION's relation attributes from 'many' side.
+	* {@link OneToManyHandler} for handling 1:n QUESTIONS's relation attributes from 'many' side.
 	**/
-	protected static final OneToManyHandler<Question> PRODUCT2QUESTIONQUESTIONHANDLER = new OneToManyHandler<Question>(
+	protected static final OneToManyHandler<Question> PRODUCT2QUESTIONQUESTIONSHANDLER = new OneToManyHandler<Question>(
 	QuestionsConstants.TC.QUESTION,
 	false,
 	"product",
-	"productPOS",
+	null,
 	false,
 	true,
-	CollectionType.COLLECTION
+	CollectionType.LIST
 	);
 	protected static final Map<String, Map<String, AttributeMode>> DEFAULT_INITIAL_ATTRIBUTES;
 	static
@@ -120,75 +120,75 @@ public abstract class GeneratedQuestionsManager extends Extension
 	}
 	
 	/**
-	 * <i>Generated method</i> - Getter of the <code>Product.question</code> attribute.
-	 * @return the question
+	 * <i>Generated method</i> - Getter of the <code>Product.questions</code> attribute.
+	 * @return the questions
 	 */
-	public Collection<Question> getQuestion(final SessionContext ctx, final Product item)
+	public List<Question> getQuestions(final SessionContext ctx, final Product item)
 	{
-		return PRODUCT2QUESTIONQUESTIONHANDLER.getValues( ctx, item );
+		return (List<Question>)PRODUCT2QUESTIONQUESTIONSHANDLER.getValues( ctx, item );
 	}
 	
 	/**
-	 * <i>Generated method</i> - Getter of the <code>Product.question</code> attribute.
-	 * @return the question
+	 * <i>Generated method</i> - Getter of the <code>Product.questions</code> attribute.
+	 * @return the questions
 	 */
-	public Collection<Question> getQuestion(final Product item)
+	public List<Question> getQuestions(final Product item)
 	{
-		return getQuestion( getSession().getSessionContext(), item );
+		return getQuestions( getSession().getSessionContext(), item );
 	}
 	
 	/**
-	 * <i>Generated method</i> - Setter of the <code>Product.question</code> attribute. 
-	 * @param value the question
+	 * <i>Generated method</i> - Setter of the <code>Product.questions</code> attribute. 
+	 * @param value the questions
 	 */
-	public void setQuestion(final SessionContext ctx, final Product item, final Collection<Question> value)
+	public void setQuestions(final SessionContext ctx, final Product item, final List<Question> value)
 	{
-		PRODUCT2QUESTIONQUESTIONHANDLER.setValues( ctx, item, value );
+		PRODUCT2QUESTIONQUESTIONSHANDLER.setValues( ctx, item, value );
 	}
 	
 	/**
-	 * <i>Generated method</i> - Setter of the <code>Product.question</code> attribute. 
-	 * @param value the question
+	 * <i>Generated method</i> - Setter of the <code>Product.questions</code> attribute. 
+	 * @param value the questions
 	 */
-	public void setQuestion(final Product item, final Collection<Question> value)
+	public void setQuestions(final Product item, final List<Question> value)
 	{
-		setQuestion( getSession().getSessionContext(), item, value );
+		setQuestions( getSession().getSessionContext(), item, value );
 	}
 	
 	/**
-	 * <i>Generated method</i> - Adds <code>value</code> to question. 
-	 * @param value the item to add to question
+	 * <i>Generated method</i> - Adds <code>value</code> to questions. 
+	 * @param value the item to add to questions
 	 */
-	public void addToQuestion(final SessionContext ctx, final Product item, final Question value)
+	public void addToQuestions(final SessionContext ctx, final Product item, final Question value)
 	{
-		PRODUCT2QUESTIONQUESTIONHANDLER.addValue( ctx, item, value );
+		PRODUCT2QUESTIONQUESTIONSHANDLER.addValue( ctx, item, value );
 	}
 	
 	/**
-	 * <i>Generated method</i> - Adds <code>value</code> to question. 
-	 * @param value the item to add to question
+	 * <i>Generated method</i> - Adds <code>value</code> to questions. 
+	 * @param value the item to add to questions
 	 */
-	public void addToQuestion(final Product item, final Question value)
+	public void addToQuestions(final Product item, final Question value)
 	{
-		addToQuestion( getSession().getSessionContext(), item, value );
+		addToQuestions( getSession().getSessionContext(), item, value );
 	}
 	
 	/**
-	 * <i>Generated method</i> - Removes <code>value</code> from question. 
-	 * @param value the item to remove from question
+	 * <i>Generated method</i> - Removes <code>value</code> from questions. 
+	 * @param value the item to remove from questions
 	 */
-	public void removeFromQuestion(final SessionContext ctx, final Product item, final Question value)
+	public void removeFromQuestions(final SessionContext ctx, final Product item, final Question value)
 	{
-		PRODUCT2QUESTIONQUESTIONHANDLER.removeValue( ctx, item, value );
+		PRODUCT2QUESTIONQUESTIONSHANDLER.removeValue( ctx, item, value );
 	}
 	
 	/**
-	 * <i>Generated method</i> - Removes <code>value</code> from question. 
-	 * @param value the item to remove from question
+	 * <i>Generated method</i> - Removes <code>value</code> from questions. 
+	 * @param value the item to remove from questions
 	 */
-	public void removeFromQuestion(final Product item, final Question value)
+	public void removeFromQuestions(final Product item, final Question value)
 	{
-		removeFromQuestion( getSession().getSessionContext(), item, value );
+		removeFromQuestions( getSession().getSessionContext(), item, value );
 	}
 	
 }
