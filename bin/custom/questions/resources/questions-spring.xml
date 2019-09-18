@@ -54,4 +54,5 @@
         <property name="add"  ref="searchResultQuestionCountPopulator"/>
     </bean>
 
+    <bean id="questionCountFacetDisplayNameProvider" class="com.org.questions.providers.QuestionCountFacetDisplayNameProvider"/>
 </beans>
