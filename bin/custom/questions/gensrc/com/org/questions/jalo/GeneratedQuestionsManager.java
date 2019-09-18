@@ -1,7 +1,7 @@
 /*
  * ----------------------------------------------------------------
  * --- WARNING: THIS FILE IS GENERATED AND WILL BE OVERWRITTEN! ---
- * --- Generated at 18.09.2019 14:35:38                         ---
+ * --- Generated at 18.09.2019 18:00:21                         ---
  * ----------------------------------------------------------------
  */
 package com.org.questions.jalo;
@@ -20,6 +20,7 @@ import de.hybris.platform.jalo.product.Product;
 import de.hybris.platform.jalo.type.CollectionType;
 import de.hybris.platform.jalo.type.ComposedType;
 import de.hybris.platform.jalo.type.JaloGenericCreationException;
+import de.hybris.platform.jalo.user.User;
 import de.hybris.platform.util.OneToManyHandler;
 import java.util.HashMap;
 import java.util.List;

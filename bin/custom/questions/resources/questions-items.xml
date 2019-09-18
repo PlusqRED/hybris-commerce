@@ -77,6 +77,18 @@
 			</attributes>
 		</itemtype>
 
+        <itemtype code="Customer" generate="false" autocreate="false">
+            <attributes>
+                <attribute qualifier="isInternal" type="java.lang.Boolean">
+                    <description>Defines if the customer is a hybris internal employee. Aggregated information</description>
+                    <persistence type="dynamic" attributeHandler="dynamicHybrisCustomerAttributeBean" />
+                    <modifiers read="true" write="true" optional="true"
+                               unique="false" />
+                    <defaultvalue>false</defaultvalue>
+                </attribute>
+            </attributes>
+        </itemtype>
+
 	</itemtypes>
 
 
