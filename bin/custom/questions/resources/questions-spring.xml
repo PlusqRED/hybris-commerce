@@ -55,4 +55,10 @@
     </bean>
 
     <bean id="questionCountFacetDisplayNameProvider" class="com.org.questions.providers.QuestionCountFacetDisplayNameProvider"/>
+
+    <bean id="hybrisPointOfServiceFacetDisplayNameProvider"
+          class="de.hybris.platform.commerceservices.search.solrfacetsearch.provider.impl.PointOfServiceFacetDisplayNameProvider">
+        <property name="pointOfServiceService" ref="pointOfServiceService" />
+    </bean>
+
 </beans>
