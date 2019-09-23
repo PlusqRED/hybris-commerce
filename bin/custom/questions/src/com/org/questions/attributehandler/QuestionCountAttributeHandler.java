@@ -13,6 +13,6 @@ public class QuestionCountAttributeHandler implements DynamicAttributeHandler<In
 
     @Override
     public void set(ProductModel model, Integer integer) {
-        model.setQuestionCount(integer);
+
     }
 }

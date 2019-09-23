@@ -53,7 +53,7 @@
             <attributes>
                 <attribute qualifier="questionCount" type="java.lang.Integer">
                     <description>number of questions</description>
-                    <modifiers optional="true"/>
+                    <modifiers optional="true" read="true" write="false"/>
                     <defaultvalue>0</defaultvalue>
                     <persistence type="dynamic" attributeHandler="questionCountAttributeHandler"/>
                 </attribute>
