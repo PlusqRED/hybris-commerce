@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<items xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	   xsi:noNamespaceSchemaLocation="items.xsd">
+
+	<relations>
+		<relation code="Product2Question" autocreate="true" generate="false" localized="false">
+			<sourceElement qualifier="product" type="Product" collectiontype="set" cardinality="one" ordered="true">
+				<modifiers read="true" write="true" search="true" optional="true" />
+			</sourceElement>
+			<targetElement qualifier="question" type="Question" cardinality="many">
+				<modifiers read="true" write="true" search="true" optional="true" />
+			</targetElement>
+		</relation>
+	</relations>
+
+	<itemtypes>
+
+	<itemtype generate="true" code="Question" autocreate="true">
+			<deployment table="Question" typecode="30000"/>
+			<attributes>
+				<attribute qualifier="code" type="java.lang.String">
+					<description>code of question</description>
+					<modifiers optional="false"/>
+					<defaultvalue>null</defaultvalue>
+					<persistence type="property" />
+				</attribute>
+				<attribute qualifier="question" type="java.lang.String">
+					<description>question content</description>
+					<modifiers optional="false"/>
+					<defaultvalue>null</defaultvalue>
+					<persistence type="property" />
+				</attribute>
+				<attribute qualifier="questionCustomer" type="Customer">
+					<description>customer's question</description>
+					<modifiers optional="false" />
+					<defaultvalue>null</defaultvalue>
+					<persistence type="property"/>
+				</attribute>
+				<attribute qualifier="answer" type="java.lang.String">
+					<description>answer</description>
+					<modifiers optional="true" />
+					<persistence type="property"/>
+				</attribute>
+				<attribute qualifier="answerCustomer" type="Customer">
+					<description>customer's answer</description>
+					<modifiers optional="true" />
+					<persistence type="property"/>
+				</attribute>
+			</attributes>
+		</itemtype>
+
+		<itemtype code="QuestionsCMSComponent" extends="ProductDetailComponent">
+			<attributes>
+				<attribute qualifier="numberOfQuestionsToShow" type="java.lang.Integer">
+					<description>number of questions to show</description>
+					<modifiers optional="false"/>
+					<defaultvalue>3</defaultvalue>
+					<persistence type="property" />
+				</attribute>
+				<attribute qualifier="fontSize" type="java.lang.Integer">
+					<description>font size of questions</description>
+					<modifiers optional="false"/>
+					<defaultvalue>15</defaultvalue>
+					<persistence type="property" />
+				</attribute>
+			</attributes>
+		</itemtype>
+
+	</itemtypes>
+
+
+
+</items>

@@ -1,0 +1,11 @@
+# ImpEx for Importing Tour and dates for a band
+
+# Macros / Replacement Parameter definitions
+$productCatalog = powertoolsProductCatalog
+$supercategories = supercategories(code, $catalogVersion)
+$baseProduct = baseProduct(code, $catalogVersion)
+$approved = approvalstatus(code)[default='approved']
+$catalogVersion = catalogversion(catalog(id[default=$productCatalog]), version[default='Online'])[unique=true, default=$productCatalog:Online]
+
+INSERT_UPDATE Question; code[unique = true]; question      ; questionCustomer(uid); answer      ; answerCustomer(uid); product(code, $catalogVersion)
+                      ; 1                  ; testQuestion1 ; anonymous            ; testAnswer1 ; anonymous          ; 3756505

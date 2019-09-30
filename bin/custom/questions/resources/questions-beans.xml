@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!--
+ [y] hybris Platform
+
+ Copyright (c) 2018 SAP SE or an SAP affiliate company.  All rights reserved.
+
+ This software is the confidential and proprietary information of SAP
+ ("Confidential Information"). You shall not disclose such Confidential
+ Information and shall use it only in accordance with the terms of the
+ license agreement you entered into with SAP.
+-->
+<!--
+	ATTENTION: This is just an example file. You have to edit it according to your needs.
+-->
+
+<beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="beans.xsd">
+
+	<!--
+		Example Data POJO
+	
+	<bean class="yemptypackage.data.MyPojo">
+		<property name="id" type="String"/>
+		<property name="flag" type="boolean"/>
+	</bean>
+	-->
+
+	<bean class="questions.data.QuestionData">
+		<description>DTO to holding questions info and content</description>
+		<property name="id" type="java.lang.String"/>
+		<property name="question" type="java.lang.String"/>
+		<property name="questionCustomer" type="de.hybris.platform.core.model.user.CustomerModel"/>
+		<property name="answer" type="java.lang.String"/>
+		<property name="answerCustomer" type="de.hybris.platform.core.model.user.CustomerModel"/>
+	</bean>
+
+	<bean class="de.hybris.platform.cmsfacades.data.ProductData">
+		<description>Expanding default ProductData with questions</description>
+		<property name="questions" type="java.util.List&lt;questions.data.QuestionData&gt;"/>
+	</bean>
+
+</beans>
