@@ -9,3 +9,4 @@ $catalogVersion = catalogversion(catalog(id[default=$productCatalog]), version[d
 
 INSERT_UPDATE Question; code[unique = true]; question      ; questionCustomer(uid); answer      ; answerCustomer(uid); product(code, $catalogVersion)
                       ; 1                  ; testQuestion1 ; anonymous            ; testAnswer1 ; anonymous          ; 3756505
+                      ; 2                  ; testQuestion2 ; anonymous            ; testAnswer3 ; anonymous          ; 3879448

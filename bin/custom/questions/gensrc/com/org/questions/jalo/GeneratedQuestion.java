@@ -1,7 +1,7 @@
 /*
  * ----------------------------------------------------------------
  * --- WARNING: THIS FILE IS GENERATED AND WILL BE OVERWRITTEN! ---
- * --- Generated at 12.09.2019 11:17:22                         ---
+ * --- Generated at 18.09.2019 14:35:38                         ---
  * ----------------------------------------------------------------
  */
 package com.org.questions.jalo;
@@ -37,8 +37,6 @@ public abstract class GeneratedQuestion extends GenericItem
 	public static final String ANSWER = "answer";
 	/** Qualifier of the <code>Question.answerCustomer</code> attribute **/
 	public static final String ANSWERCUSTOMER = "answerCustomer";
-	/** Qualifier of the <code>Question.productPOS</code> attribute **/
-	public static final String PRODUCTPOS = "productPOS";
 	/** Qualifier of the <code>Question.product</code> attribute **/
 	public static final String PRODUCT = "product";
 	/**
@@ -48,10 +46,10 @@ public abstract class GeneratedQuestion extends GenericItem
 	QuestionsConstants.TC.QUESTION,
 	false,
 	"product",
-	"productPOS",
+	null,
 	false,
 	true,
-	CollectionType.COLLECTION
+	CollectionType.LIST
 	);
 	protected static final Map<String, AttributeMode> DEFAULT_INITIAL_ATTRIBUTES;
 	static
@@ -62,7 +60,6 @@ public abstract class GeneratedQuestion extends GenericItem
 		tmp.put(QUESTIONCUSTOMER, AttributeMode.INITIAL);
 		tmp.put(ANSWER, AttributeMode.INITIAL);
 		tmp.put(ANSWERCUSTOMER, AttributeMode.INITIAL);
-		tmp.put(PRODUCTPOS, AttributeMode.INITIAL);
 		tmp.put(PRODUCT, AttributeMode.INITIAL);
 		DEFAULT_INITIAL_ATTRIBUTES = Collections.unmodifiableMap(tmp);
 	}
@@ -221,79 +218,6 @@ public abstract class GeneratedQuestion extends GenericItem
 	public void setProduct(final Product value)
 	{
 		setProduct( getSession().getSessionContext(), value );
-	}
-	
-	/**
-	 * <i>Generated method</i> - Getter of the <code>Question.productPOS</code> attribute.
-	 * @return the productPOS
-	 */
-	 Integer getProductPOS(final SessionContext ctx)
-	{
-		return (Integer)getProperty( ctx, PRODUCTPOS);
-	}
-	
-	/**
-	 * <i>Generated method</i> - Getter of the <code>Question.productPOS</code> attribute.
-	 * @return the productPOS
-	 */
-	 Integer getProductPOS()
-	{
-		return getProductPOS( getSession().getSessionContext() );
-	}
-	
-	/**
-	 * <i>Generated method</i> - Getter of the <code>Question.productPOS</code> attribute. 
-	 * @return the productPOS
-	 */
-	 int getProductPOSAsPrimitive(final SessionContext ctx)
-	{
-		Integer value = getProductPOS( ctx );
-		return value != null ? value.intValue() : 0;
-	}
-	
-	/**
-	 * <i>Generated method</i> - Getter of the <code>Question.productPOS</code> attribute. 
-	 * @return the productPOS
-	 */
-	 int getProductPOSAsPrimitive()
-	{
-		return getProductPOSAsPrimitive( getSession().getSessionContext() );
-	}
-	
-	/**
-	 * <i>Generated method</i> - Setter of the <code>Question.productPOS</code> attribute. 
-	 * @param value the productPOS
-	 */
-	 void setProductPOS(final SessionContext ctx, final Integer value)
-	{
-		setProperty(ctx, PRODUCTPOS,value);
-	}
-	
-	/**
-	 * <i>Generated method</i> - Setter of the <code>Question.productPOS</code> attribute. 
-	 * @param value the productPOS
-	 */
-	 void setProductPOS(final Integer value)
-	{
-		setProductPOS( getSession().getSessionContext(), value );
-	}
-	
-	/**
-	 * <i>Generated method</i> - Setter of the <code>Question.productPOS</code> attribute. 
-	 * @param value the productPOS
-	 */
-	 void setProductPOS(final SessionContext ctx, final int value)
-	{
-		setProductPOS( ctx,Integer.valueOf( value ) );
-	}
-	
-	/**
-	 * <i>Generated method</i> - Setter of the <code>Question.productPOS</code> attribute. 
-	 * @param value the productPOS
-	 */
-	 void setProductPOS(final int value)
-	{
-		setProductPOS( getSession().getSessionContext(), value );
 	}
 	
 	/**

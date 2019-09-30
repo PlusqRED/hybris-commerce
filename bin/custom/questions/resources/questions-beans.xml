@@ -36,6 +36,10 @@
 	<bean class="de.hybris.platform.cmsfacades.data.ProductData">
 		<description>Expanding default ProductData with questions</description>
 		<property name="questions" type="java.util.List&lt;questions.data.QuestionData&gt;"/>
-	</bean>
+    </bean>
+
+    <bean class="de.hybris.platform.commercefacades.product.data.ProductData">
+        <property name="questionCount" type="java.lang.Integer"/>
+    </bean>
 
 </beans>
